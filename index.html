@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/bootstrap.css">
+   <link rel="stylesheet" href="./css/main.css">
+   <title>To Do</title>
+</head>
+<body style="background-color: #0e1e25;">
+   
+   <div class="container">
+      
+      <h1 class="h1 pt-4" style="text-align: center; color: #fff;">
+         My "To Do" List!
+      </h1>
+      
+      <form method="post" style="display: flex; align-items: center; justify-content: center;" class="form py-4">
+         
+         <label class="w-25 label">
+            <input class="form-control input" type="text" placeholder="Write a new Note" aria-label=".form-control-sm example">
+         </label>
+         
+         <button type="submit" class="btn btn-primary ms-2 add-btn">Add Note</button>
+         
+      </form>
+      
+      
+   </div>
+   
+   <ol class="list">
+      
+   </ol>
+   <div class="btn-box">
+      <button type="button" class="btn btn-primary allBnt">
+         All Notes <span class="badge bg-success all"></span>
+      </button>
+      <button type="button" class="btn btn-light">
+         Active Notes <span class="badge bg-success active"></span>
+      </button>
+      <button type="button" class="btn btn-secondary">
+         Complete Notes <span class="badge bg-success complete"></span>
+      </button>
+      <a href="./index.html" class="btn btn-danger">Delete All Notes</a>
+   </div>
+   
+
+   <h2 class="newTitle mt-5" style="text-align: center; color: #fff;">
+
+   </h2>
+
+   <ol class="seondList w-50 mx-auto p-0">
+
+   </ol>
+   
+   
+   
+   <script src="./js/scripts.js"></script>
+</body>
+</html>

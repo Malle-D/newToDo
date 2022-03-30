@@ -1,0 +1,52 @@
+.btn-box{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 50%;
+   margin: 30px auto 0;
+}
+.list{
+   width: 50%;
+   margin: 0px auto;
+   padding: 0px;
+}
+.li{
+   padding: 20px 0px;
+   font-size: 22px;
+   display: flex;
+   align-items: center;
+   color: #fff;
+   list-style: none;
+   border-bottom: 1px solid #FFF;
+}
+.li div{
+   margin: 0px auto 0px 10px;
+}
+.li div p{
+   margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 426px){
+   .form{
+      flex-direction: column;
+   }
+   .label{
+      width: 75% !important;
+      margin-bottom: 10px;
+   }
+   .add-btn{
+      margin-left: 0px !important;
+   }
+   .btn-box{
+      width: 75%;
+      flex-wrap: wrap;
+      row-gap: 10px;
+   }
+   .list{
+      width: 85%;
+   }
+   .seondList{
+      padding: 0px;
+      width: 85% !important;
+   }
+}
