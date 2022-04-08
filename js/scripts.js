@@ -4,15 +4,19 @@ let elList = document.querySelector(".list")
 let all = document.querySelector(".all")
 let complete = document.querySelector(".complete")
 let active = document.querySelector(".active")
-
 let activeBtn = document.querySelector(".btn-light")
 let secondBtn = document.querySelector(".btn-secondary")
 let allBtn = document.querySelector(".allBnt")
+let dltAll = document.querySelector(".delete-all")
 let secondList = document.querySelector(".seondList")
 
 let newTitle = document.querySelector(".newTitle")
 
-let arrTodo = []
+let defoltTodo = JSON.parse(window.localStorage.getItem("render"))
+
+let arrTodo = defoltTodo || []
+
+render(arrTodo, elList)
 
 function render(array, list) {
    
@@ -80,6 +84,8 @@ function secondRender(array, list) {
       newLi.appendChild(newBox)
 
       list.appendChild(newLi)
+
+      // window.localStorage.setItem("render", JSON.stringify(arrTodo))
       
    })
 }
@@ -101,6 +107,7 @@ elForm.addEventListener("submit", evet =>{
    else if (elInput.value.trim()) {
       arrTodo.push(newTodo)
       render(arrTodo,elList)
+      window.localStorage.setItem("render", JSON.stringify(arrTodo))
    }
    else{
       alert("You haven't entered anything!")
@@ -127,7 +134,8 @@ elList.addEventListener("click",evt =>{
       
       all.textContent = arrTodo.length
       
-      
+      window.localStorage.setItem("render", JSON.stringify(arrTodo))
+
    }
    else if(evt.target.matches(".checkbox")){
       
@@ -139,6 +147,8 @@ elList.addEventListener("click",evt =>{
       
       render(arrTodo,elList)
       
+      window.localStorage.setItem("render", JSON.stringify(arrTodo))
+
    }
 })
 
@@ -180,4 +190,7 @@ allBtn.addEventListener("click", f =>{
 
    secondList.innerHTML = null
    
+})
+dltAll.addEventListener("click", f =>{
+   window.localStorage.clear("render")
 })
